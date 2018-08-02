@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import os
 
@@ -8,25 +8,24 @@ from polaris_common import topology
 from polaris_pdns import config
 from polaris_pdns.core.polaris import Polaris
 
-
-__all__ = [ 'main', 'load_configuration' ]
+__all__ = ['main', 'load_configuration']
 
 
 def main():
-    """Config must be loaded prior to calling this."""   
+    """Config must be loaded prior to calling this."""
     Polaris().run()
 
 
 def load_configuration():
     """Load configuration from files"""
-    ### set config.BASE['INSTALL_PREFIX'] from POLARIS_INSTALL_PREFIX env
+    # set config.BASE['INSTALL_PREFIX'] from POLARIS_INSTALL_PREFIX env
     try:
         config.BASE['INSTALL_PREFIX'] = \
-                os.environ['POLARIS_INSTALL_PREFIX']
+            os.environ['POLARIS_INSTALL_PREFIX']
     except KeyError:
         raise Exception('POLARIS_INSTALL_PREFIX env is not set')
 
-    ### optionally load BASE configuration ###
+    # optionally load BASE configuration
     base_config_file = os.path.join(
         config.BASE['INSTALL_PREFIX'], 'etc', 'polaris-pdns.yaml')
     if os.path.isfile(base_config_file):
@@ -42,7 +41,7 @@ def load_configuration():
                 else:
                     config.BASE[k] = base_config[k]
 
-    ### optionally load TOPOLOGY_MAP configuration ###
+    # optionally load TOPOLOGY_MAP configuration
     topology_config_file = os.path.join(
         config.BASE['INSTALL_PREFIX'], 'etc', 'polaris-topology.yaml')
     if os.path.isfile(topology_config_file):
@@ -52,4 +51,3 @@ def load_configuration():
         if topology_config:
             config.TOPOLOGY_MAP = \
                 topology.config_to_map(topology_config)
-

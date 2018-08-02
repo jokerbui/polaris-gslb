@@ -15,7 +15,7 @@ from polaris_common import topology, sharedmem
 from polaris_health import Error, config, prober, tracker
 import polaris_health.util.log
 
-__all__ = [ 'Guardian' ]
+__all__ = ['Guardian']
 
 LOG = logging.getLogger(__name__)
 LOG.addHandler(logging.NullHandler())
@@ -36,7 +36,6 @@ TERMINATE_ATTEMPT_DELAY = 0.1
 
 
 class Guardian:
-
     """Polaris Guardian
 
     Loads configuration, sets up logging, starts other processes.
@@ -59,20 +58,20 @@ class Guardian:
             server_max_value_length=config.BASE['SHARED_MEM_SERVER_MAX_VALUE_LENGTH'])
 
     @staticmethod
-    def load_configuration():        
+    def load_configuration():
         """Load configuration from files"""
         LOG.debug('loading Polaris health configuration')
 
-        ### set config.BASE['INSTALL_PREFIX'] from POLARIS_INSTALL_PREFIX env
+        # set config.BASE['INSTALL_PREFIX'] from POLARIS_INSTALL_PREFIX env
         try:
-                config.BASE['INSTALL_PREFIX'] = \
-                    os.environ['POLARIS_INSTALL_PREFIX']
+            config.BASE['INSTALL_PREFIX'] = \
+                os.environ['POLARIS_INSTALL_PREFIX']
         except KeyError:
             log_msg = 'POLARIS_INSTALL_PREFIX env is not set'
             LOG.error(log_msg)
             raise Error(log_msg)
 
-        ### optionally load BASE configuration ###
+        # optionally load BASE configuration
         base_config_file = os.path.join(
             config.BASE['INSTALL_PREFIX'], 'etc', 'polaris-health.yaml')
         if os.path.isfile(base_config_file):
@@ -83,7 +82,7 @@ class Guardian:
                 # validate and set values
                 for k in base_config:
                     if k not in config.BASE:
-                        log_msg =('unknown configuration option "{}"'
+                        log_msg = ('unknown configuration option "{}"'
                                    .format(k))
                         LOG.error(log_msg)
                         raise Error(log_msg)
@@ -95,10 +94,10 @@ class Guardian:
             config.BASE['INSTALL_PREFIX'], 'run', 'polaris-health.pid')
 
         config.BASE['CONTROL_SOCKET_FILE'] = os.path.join(
-            config.BASE['INSTALL_PREFIX'], 
+            config.BASE['INSTALL_PREFIX'],
             'run', 'polaris-health.controlsocket')
 
-        ### load LB configuration ###
+        # load LB configuration
         lb_config_file = os.path.join(
             config.BASE['INSTALL_PREFIX'], 'etc', 'polaris-lb.yaml')
         if not os.path.isfile(lb_config_file):
@@ -109,7 +108,7 @@ class Guardian:
             with open(lb_config_file) as fp:
                 config.LB = yaml.load(fp)
 
-        ### optionally load TOPOLOGY_MAP configuration ###
+        # optionally load TOPOLOGY_MAP configuration
         topology_config_file = os.path.join(
             config.BASE['INSTALL_PREFIX'], 'etc', 'polaris-topology.yaml')
         if os.path.isfile(topology_config_file):
@@ -129,7 +128,7 @@ class Guardian:
         """
         # setup logging
         if debug:
-            polaris_health.util.log.setup_debug()    
+            polaris_health.util.log.setup_debug()
         else:
             polaris_health.util.log.setup()
 
@@ -230,8 +229,8 @@ class Guardian:
                                'connection processing'
                                .format(e.__class__.__name__, e))
                     LOG.warning(log_msg)
-                               
-            ### health check the child procs ###
+
+            # health check the child procs
             alive = 0
             for p in self._processes:
                 if p.is_alive():
@@ -252,12 +251,12 @@ class Guardian:
                 self._terminate_child_procs()
                 return
 
-            ### push heartbeat ###
+            # push heartbeat
             t_now = time.monotonic()
             if t_now - t_last >= HEARTBEAT_INTERVAL:
-                obj = { 'timestamp': time.time() }
+                obj = {'timestamp': time.time()}
                 val = self._sm.set(config.BASE['SHARED_MEM_HEARTBEAT_KEY'],
-                                   json.dumps(obj), 
+                                   json.dumps(obj),
                                    HEARTBEAT_INTERVAL + 4)
                 if val is not True:
                     log_msg = 'failed to write heartbeat to the shared memory'
@@ -293,7 +292,7 @@ class Guardian:
         on .terminate(), we attempt to .terminate() it several times.
         """
         LOG.info('terminating {} processes...'.format(len(self._processes)))
- 
+
         i = 0
         while i < MAX_TERMINATE_ATTEMPTS:
             i += 1
@@ -310,7 +309,7 @@ class Guardian:
             # run the termination loop again 
             for p in self._processes:
                 if p.is_alive():
-                    LOG.warning('process {} is still running after ' 
+                    LOG.warning('process {} is still running after '
                                 'terminate() attempt {}'.format(p, i))
                     break
             # no processes are alive, exit out
@@ -345,7 +344,7 @@ class Guardian:
             os.remove(config.BASE['PID_FILE'])
         except OSError as e:
             log_msg = ('unable to delete pid file {} - {} {}'
-                       .format(config.BASE['PID_FILE'], 
+                       .format(config.BASE['PID_FILE'],
                                e.__class__.__name__, e))
             LOG.error(log_msg)
             raise Error(log_msg)
@@ -368,7 +367,7 @@ class Guardian:
             self._control_socket.bind(config.BASE['CONTROL_SOCKET_FILE'])
         except OSError as e:
             log_msg = ('unable to bind control socket {} - {} {}'
-                       .format(config.BASE['CONTROL_SOCKET_FILE'], 
+                       .format(config.BASE['CONTROL_SOCKET_FILE'],
                                e.__class__.__name__, e))
             LOG.error(log_msg)
             raise Error(log_msg)
@@ -390,4 +389,3 @@ class Guardian:
     def _sigterm_handler(self, signo, stack_frame):
         LOG.info('received sig {}'.format(signo))
         self._terminate_child_procs()
-

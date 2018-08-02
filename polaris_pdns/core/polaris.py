@@ -152,9 +152,7 @@ class Polaris(RemoteBackend):
         # use the _default distribution table by default
         dist_table = pool['dist_tables']['_default']
 
-        ##################
-        ### pool is UP ###
-        ##################
+        # pool is UP
         if pool['status']:
             # if using a topology based method, check if we have a distribution
             # table in the same region, if so - use it
@@ -180,9 +178,7 @@ class Polaris(RemoteBackend):
                 if region in pool['dist_tables']:
                     dist_table = pool['dist_tables'][region]
 
-        ####################
-        ### pool is DOWN ###
-        ####################
+        # pool is DOWN
         else:
             # if fallback is set to "refuse", refuse the query
             # (SOA response must return False as well)
@@ -210,7 +206,7 @@ class Polaris(RemoteBackend):
             self.result = False
             return
 
-        ### add records to the response ###
+        # add records to the response
         for i in range(num_records_return):
             # add record to the response
             self.add_record(qtype='A',

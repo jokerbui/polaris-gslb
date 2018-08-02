@@ -84,7 +84,7 @@ class StatePusher(threading.Thread):
         if val is True:
             pushes_ok += 1
         else:    
-            log_msg = ('failed to write ppdns state to the shared memory')
+            log_msg = 'failed to write ppdns state to the shared memory'
             LOG.warning(log_msg)
 
         # push generic form of the state
@@ -95,7 +95,7 @@ class StatePusher(threading.Thread):
         if val is True:
             pushes_ok += 1
         else:
-            log_msg = ('failed to write generic state to the shared memory')
+            log_msg = 'failed to write generic state to the shared memory'
             LOG.warning(log_msg)
 
         # push state timestamp last
@@ -104,7 +104,7 @@ class StatePusher(threading.Thread):
         if val is True:
             pushes_ok += 1
         else:    
-            log_msg = ('failed to write state timestamp to the shared memory')
+            log_msg = 'failed to write state timestamp to the shared memory'
             LOG.warning(log_msg)
 
         # if all memcache pushes are successful

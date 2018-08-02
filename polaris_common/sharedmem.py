@@ -5,7 +5,7 @@ import logging
 import memcache
 
 
-__all__ = [ 'MemcacheClient' ]
+__all__ = ['MemcacheClient']
 
 LOG = logging.getLogger(__name__)
 LOG.addHandler(logging.NullHandler())

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f3cd8564-8611-4f5f-a371-0b2fbd3c8424" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaris_common/sharedmem.py" beforeDir="false" afterPath="$PROJECT_DIR$/polaris_common/sharedmem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaris_health/guardian/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/polaris_health/guardian/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaris_health/tracker/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/polaris_health/tracker/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaris_pdns/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/polaris_pdns/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaris_pdns/core/polaris.py" beforeDir="false" afterPath="$PROJECT_DIR$/polaris_pdns/core/polaris.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polaris_pdns/core/remotebackend.py" beforeDir="false" afterPath="$PROJECT_DIR$/polaris_pdns/core/remotebackend.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/polaris_pdns/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="45" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="45" />
+              <folding>
+                <element signature="e#24#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="remotebackend.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/polaris_pdns/core/remotebackend.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="651">
+              <caret line="31" column="16" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="16" />
+              <folding>
+                <element signature="e#25#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/polaris_pdns/config/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="polaris.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/polaris_pdns/core/polaris.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3549">
+              <caret line="169" column="22" lean-forward="true" selection-start-line="169" selection-start-column="22" selection-end-line="169" selection-end-column="22" />
+              <folding>
+                <element signature="e#25#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="polaris-pdns-control" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/polaris-pdns-control">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sharedmem.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/polaris_common/sharedmem.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+              <folding>
+                <element signature="e#25#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="polaris-health-control" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/polaris-health-control">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="644">
+              <caret line="54" column="38" lean-forward="true" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+              <folding>
+                <element signature="e#47#62#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/polaris_health/guardian/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/polaris_health/tracker/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2956">
+              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+              <folding>
+                <element signature="e#25#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/polaris_pdns/__init__.py" />
+        <option value="$PROJECT_DIR$/polaris_pdns/core/polaris.py" />
+        <option value="$PROJECT_DIR$/polaris_pdns/core/remotebackend.py" />
+        <option value="$PROJECT_DIR$/polaris_common/sharedmem.py" />
+        <option value="$PROJECT_DIR$/polaris_health/guardian/__init__.py" />
+        <option value="$PROJECT_DIR$/polaris_health/tracker/__init__.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="206" />
+    <option name="y" value="187" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="polaris-gslb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polaris-gslb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="polaris-gslb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polaris-gslb" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="polaris-gslb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polaris-gslb" type="462c0819:PsiDirectoryNode" />
+              <item name="etc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="polaris-gslb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polaris-gslb" type="462c0819:PsiDirectoryNode" />
+              <item name="polaris_common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="polaris-gslb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polaris-gslb" type="462c0819:PsiDirectoryNode" />
+              <item name="polaris_health" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="polaris-gslb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polaris-gslb" type="462c0819:PsiDirectoryNode" />
+              <item name="polaris_health" type="462c0819:PsiDirectoryNode" />
+              <item name="guardian" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="polaris-gslb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polaris-gslb" type="462c0819:PsiDirectoryNode" />
+              <item name="polaris_pdns" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="polaris-gslb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polaris-gslb" type="462c0819:PsiDirectoryNode" />
+              <item name="polaris_pdns" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="polaris-gslb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polaris-gslb" type="462c0819:PsiDirectoryNode" />
+              <item name="polaris_pdns" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Course" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18385416" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tests/tcp_listen.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/pdns.conf.dist">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/polaris-pdns">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaris_common/topology.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1076" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaris_common/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaris_pdns/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="45" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaris_pdns/config/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaris_pdns/core/remotebackend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="16" />
+          <folding>
+            <element signature="e#25#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaris_pdns/core/polaris.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3549">
+          <caret line="169" column="22" lean-forward="true" selection-start-line="169" selection-start-column="22" selection-end-line="169" selection-end-column="22" />
+          <folding>
+            <element signature="e#25#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/polaris-pdns-control">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaris_health/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/polaris-health">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1253" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaris_common/sharedmem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding>
+            <element signature="e#25#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/polaris-health-control">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="54" column="38" lean-forward="true" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+          <folding>
+            <element signature="e#47#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaris_health/guardian/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaris_health/tracker/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2956">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="e#25#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

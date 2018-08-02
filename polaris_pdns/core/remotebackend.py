@@ -7,13 +7,11 @@ import time
 
 from polaris_pdns import config
 
-
-__all__ = [ 'RemoteBackend' ]
+__all__ = ['RemoteBackend']
 
 
 class RemoteBackend:
-
-    """PowerDNS Remote Backend handler 
+    """PowerDNS Remote Backend handler
 
     Implements pipe handler for PowerDNS Remote Backend JSON API:      
     https://doc.powerdns.com/md/authoritative/backend-remote/
@@ -36,11 +34,9 @@ class RemoteBackend:
         # this will store the request string
         self.__request = None
 
-    ########################
-    ### public interface ###
-    ########################
+    # public interface
     def run(self):
-        # run additonal startup tasks if defined by a child class
+        # run additional startup tasks if defined by a child class
         self.run_additional_startup_tasks()
 
         # start the main loop execution
@@ -71,9 +67,7 @@ class RemoteBackend:
             'ttl': ttl
         })
 
-    #############################################
-    ### internal do_ methods, do not override ###
-    #############################################
+    # internal do_ methods, do not override
     def do_initialize(self, params):
         """Initialization handler
 
@@ -81,21 +75,19 @@ class RemoteBackend:
         self.log.append('Polaris Remote Backend initialized')
         self.result = True
 
-    #########################
-    ### private interface ###
-    #########################
+    # private interface
     def __main_loop(self):
         """The main program loop, reads JSON requests from stdin,
         writes JSON responses to stdout
 
         """
-        while(True):
+        while True:
             # reset result and log
             self.result = False
             self.log = []
 
             # get the request string, strip the ending "\n"
-            self.__request  = self.__reader.readline().rstrip()
+            self.__request = self.__reader.readline().rstrip()
 
             # store the start time
             self._start_time = time.time()
@@ -127,20 +119,20 @@ class RemoteBackend:
                 continue
 
             # DEBUG ONLY
-            #method(obj['parameters'])
-            #self.__write_response()
-            #continue
-            
+            # method(obj['parameters'])
+            # self.__write_response()
+            # continue
+
             # execute method
             try:
-                method(obj['parameters'])      
+                method(obj['parameters'])
             except Exception:
                 self.result = False
                 self.log.append('error: method "{}" failed to execute'
                                 .format(method_name, self.__request))
                 self.__write_response()
                 continue
-            
+
             # write response
             self.__write_response()
 
@@ -177,10 +169,9 @@ class RemoteBackend:
             # which can make it hard to read
             # join log entries into a single string
             # response 'log' field must still be an array
-            obj['log'] = [ ' '.join(self.log) ]
+            obj['log'] = [' '.join(self.log)]
 
         # send the response to pdns
         self.__writer.write(json.dumps(obj))
         self.__writer.write('\n')
         self.__writer.flush()
-
