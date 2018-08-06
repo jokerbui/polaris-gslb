@@ -212,10 +212,11 @@ class Guardian:
         """
         # setting t_last so that "if t_now - t_last >= HEALTHCHECK_INTERVAL"
         # below evalutes to True on the first run and a heartbeat is written
+
         t_last = time.monotonic() - HEARTBEAT_INTERVAL - 1
 
         while True:
-            ### process control connections ###
+            # process control connections
             try:
                 conn, client_addr = self._control_socket.accept()
             # e.g. timeout
@@ -326,7 +327,8 @@ class Guardian:
                 except OSError:
                     pass
 
-    def _write_pid_file(self):
+    @staticmethod
+    def _write_pid_file():
         """Create file containing the PID of the Guardian process"""
         try:
             with open(config.BASE['PID_FILE'], 'w') as fh:
@@ -338,7 +340,8 @@ class Guardian:
             LOG.error(log_msg)
             raise Error(log_msg)
 
-    def _delete_pid_file(self):
+    @staticmethod
+    def _delete_pid_file():
         """Delete Guardian process PID file"""
         try:
             os.remove(config.BASE['PID_FILE'])
@@ -375,7 +378,8 @@ class Guardian:
         # listen on the socket for incoming connections
         self._control_socket.listen(1)
 
-    def _delete_control_socket_file(self):
+    @staticmethod
+    def _delete_control_socket_file():
         """Delete control socket file"""
         try:
             os.unlink(config.BASE['CONTROL_SOCKET_FILE'])
