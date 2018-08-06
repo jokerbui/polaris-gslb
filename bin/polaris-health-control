@@ -82,7 +82,8 @@ class PolarisHealthControl:
         except OSError:
             return False
 
-    def _send_control_sock_cmd(self, cmd):
+    @staticmethod
+    def _send_control_sock_cmd(cmd):
         sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
         sock.settimeout(1)
         sock.connect(config.BASE['CONTROL_SOCKET_FILE'])

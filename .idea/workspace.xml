@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3cd8564-8611-4f5f-a371-0b2fbd3c8424" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/polaris-gslb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/polaris-gslb.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/06-08-2018.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polaris_health/guardian/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/polaris_health/guardian/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/polaris-health-control" beforeDir="false" afterPath="$PROJECT_DIR$/bin/polaris-health-control" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,14 +16,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/polaris_health/guardian/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="858">
-              <caret line="395" lean-forward="true" selection-start-line="395" selection-end-line="395" />
+            <state relative-caret-position="231">
+              <caret line="159" column="10" lean-forward="true" selection-start-line="159" selection-start-column="10" selection-end-line="159" selection-end-column="35" />
               <folding>
                 <element signature="e#25#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="probe.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/polaris_health/prober/probe.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+              <folding>
+                <element signature="e#25#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="polaris-health-control" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/polaris-health-control">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="739">
+              <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="43" />
+              <folding>
+                <element signature="e#47#62#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="06-08-2018.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/06-08-2018.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="136">
+                <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -42,6 +80,8 @@
         <option value="$PROJECT_DIR$/polaris_common/sharedmem.py" />
         <option value="$PROJECT_DIR$/polaris_health/tracker/__init__.py" />
         <option value="$PROJECT_DIR$/polaris_health/guardian/__init__.py" />
+        <option value="$PROJECT_DIR$/bin/polaris-health-control" />
+        <option value="$PROJECT_DIR$/docs/06-08-2018.md" />
       </list>
     </option>
   </component>
@@ -53,9 +93,11 @@
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <showMembers ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -67,6 +109,11 @@
               <item name="polaris-gslb" type="b2602c69:ProjectViewProjectNode" />
               <item name="polaris-gslb" type="462c0819:PsiDirectoryNode" />
               <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="polaris-gslb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polaris-gslb" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="polaris-gslb" type="b2602c69:ProjectViewProjectNode" />
@@ -92,6 +139,27 @@
             <path>
               <item name="polaris-gslb" type="b2602c69:ProjectViewProjectNode" />
               <item name="polaris-gslb" type="462c0819:PsiDirectoryNode" />
+              <item name="polaris_health" type="462c0819:PsiDirectoryNode" />
+              <item name="guardian" type="462c0819:PsiDirectoryNode" />
+              <item name="__init__.py" type="8704e2dd:PyFileNode" />
+            </path>
+            <path>
+              <item name="polaris-gslb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polaris-gslb" type="462c0819:PsiDirectoryNode" />
+              <item name="polaris_health" type="462c0819:PsiDirectoryNode" />
+              <item name="guardian" type="462c0819:PsiDirectoryNode" />
+              <item name="__init__.py" type="8704e2dd:PyFileNode" />
+              <item name="Guardian" type="dd8bbb05:PyElementNode" />
+            </path>
+            <path>
+              <item name="polaris-gslb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polaris-gslb" type="462c0819:PsiDirectoryNode" />
+              <item name="polaris_health" type="462c0819:PsiDirectoryNode" />
+              <item name="prober" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="polaris-gslb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polaris-gslb" type="462c0819:PsiDirectoryNode" />
               <item name="polaris_pdns" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -110,7 +178,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -137,26 +204,66 @@
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18370694" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29414982" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/polaris_health/guardian/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2193">
+          <caret line="142" column="29" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="29" />
+          <folding>
+            <element signature="e#25#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaris_health/prober/probe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <element signature="e#25#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/polaris-health-control">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="49" column="16" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="16" />
+          <folding>
+            <element signature="e#47#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/06-08-2018.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/polaris_pdns/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -232,9 +339,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1666">
           <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-          <folding>
-            <element signature="e#25#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -300,9 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/polaris_health/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/polaris-health">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1253" />
@@ -318,35 +419,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/polaris_health/tracker/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaris_health/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polaris_health/prober/probe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <element signature="e#25#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/polaris-health-control">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+        <state relative-caret-position="739">
+          <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="43" />
           <folding>
             <element signature="e#47#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/polaris_health/tracker/__init__.py">
+    <entry file="file://$PROJECT_DIR$/polaris_health/guardian/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        <state relative-caret-position="231">
+          <caret line="159" column="10" lean-forward="true" selection-start-line="159" selection-start-column="10" selection-end-line="159" selection-end-column="35" />
           <folding>
             <element signature="e#25#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/polaris_health/guardian/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="395" lean-forward="true" selection-start-line="395" selection-end-line="395" />
-          <folding>
-            <element signature="e#25#39#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/docs/06-08-2018.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="136">
+            <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
         </state>
       </provider>
+      <provider editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
