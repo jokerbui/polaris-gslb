@@ -12,16 +12,15 @@ from polaris_common import sharedmem
 from polaris_health import config, state, util
 from polaris_health.prober.probe import Probe
 
-
 LOG = logging.getLogger(__name__)
 LOG.addHandler(logging.NullHandler())
 
 # how long to wait(block) when reading from probe response queue
 # non-blocking will eat 100% cpu at low message rate
-PROBE_RESPONSES_QUEUE_WAIT =  0.050
+PROBE_RESPONSES_QUEUE_WAIT = 0.050
 
 # how often to scan the state(and issue probe requests)
-SCAN_STATE_INTERVAL = 1 # 1s
+SCAN_STATE_INTERVAL = 1  # 1s
 
 # the main load balancing state, initialized in Tracker's init
 STATE = None
@@ -36,7 +35,6 @@ STATE_PUSH_INTERVAL = 0.5
 
 
 class StatePusher(threading.Thread):
-    
     """StatePusher pushes state updates into shared memory.
     """
 
@@ -65,7 +63,7 @@ class StatePusher(threading.Thread):
             # sleep until the next iteration    
             time.sleep(STATE_PUSH_INTERVAL)
 
-    def push_states(self): 
+    def push_states(self):
         # lock the state and generate its various forms
         global STATE_LOCK
         with STATE_LOCK:
@@ -80,10 +78,10 @@ class StatePusher(threading.Thread):
 
         # push PPDNS distribution form of the state
         val = self.sm.set(config.BASE['SHARED_MEM_PPDNS_STATE_KEY'],
-                           dist_form)
+                          dist_form)
         if val is True:
             pushes_ok += 1
-        else:    
+        else:
             log_msg = 'failed to write ppdns state to the shared memory'
             LOG.warning(log_msg)
 
@@ -91,7 +89,7 @@ class StatePusher(threading.Thread):
         # add timestampt to the object
         generic_form['timestamp'] = STATE_TIMESTAMP
         val = self.sm.set(config.BASE['SHARED_MEM_GENERIC_STATE_KEY'],
-                           generic_form)
+                          generic_form)
         if val is True:
             pushes_ok += 1
         else:
@@ -100,10 +98,10 @@ class StatePusher(threading.Thread):
 
         # push state timestamp last
         val = self.sm.set(config.BASE['SHARED_MEM_STATE_TIMESTAMP_KEY'],
-                           STATE_TIMESTAMP)
+                          STATE_TIMESTAMP)
         if val is True:
             pushes_ok += 1
-        else:    
+        else:
             log_msg = 'failed to write state timestamp to the shared memory'
             LOG.warning(log_msg)
 
@@ -116,8 +114,7 @@ class StatePusher(threading.Thread):
 
 
 class Tracker(multiprocessing.Process):
-
-    """Track the health status of backend servers and propagate it to 
+    """Track the health status of backend servers and propagate it to
     shared memory.
     """
 
@@ -157,7 +154,7 @@ class Tracker(multiprocessing.Process):
                 # non-blocking will load cpu needlessly
                 probe = self.prober_responses.get(
                     block=True, timeout=PROBE_RESPONSES_QUEUE_WAIT)
-            except queue.Empty: # nothing on the queue
+            except queue.Empty:  # nothing on the queue
                 pass
             else:
                 with STATE_LOCK:
@@ -180,7 +177,7 @@ class Tracker(multiprocessing.Process):
         args:
             probe: Probe() object
         """
-        LOG.debug('received {}'.format(str(probe)))  
+        LOG.debug('received {}'.format(str(probe)))
 
         # get a reference to the individual pool member 
         # based on pool_name and member_ip
@@ -190,8 +187,8 @@ class Tracker(multiprocessing.Process):
 
         # set member status attributes 
         member.status_reason = probe.status_reason
-        
-        ### probe success ###
+
+        # probe success
         if probe.status:
             # reset the value of retries left to the parent's pool value
             member.retries_left = \
@@ -205,7 +202,7 @@ class Tracker(multiprocessing.Process):
             else:
                 member.status = True
 
-        ### probe failed ###
+        # probe failed
         else:
             # either a new member or a member is UP state
             if member.status is True or member.status is None:
@@ -229,14 +226,14 @@ class Tracker(multiprocessing.Process):
         STATE_TIMESTAMP = time.time()
 
         LOG.info('pool member status change: '
-                'member {member_ip}'
-                '(name: {member_name} monitor IP: {monitor_ip}) '
-                'of pool {pool_name} is {member_status}, '
-                'reason: {member_status_reason}'
+                 'member {member_ip}'
+                 '(name: {member_name} monitor IP: {monitor_ip}) '
+                 'of pool {pool_name} is {member_status}, '
+                 'reason: {member_status_reason}'
                  .format(member_ip=probe.member_ip,
                          member_name=member.name,
                          monitor_ip=member.monitor_ip,
-                         pool_name=probe.pool_name, 
+                         pool_name=probe.pool_name,
                          member_status=state.pool.pprint_status(member.status),
                          member_status_reason=member.status_reason))
         # check if this change affects the overall pool's status
@@ -254,14 +251,14 @@ class Tracker(multiprocessing.Process):
     def _request_probe(self, pool, member):
         """Request a probe if required (either the first probe
         or if it's time for a next one)
-        """     
+        """
         request_probe = False
 
         # if member.last_probe_issued_time is not None, it means that
         # a probe had been issued for this member already,
         # check if it's time for a new one
-        if member.last_probe_issued_time is not None: 
-             if time.time() - member.last_probe_issued_time \
+        if member.last_probe_issued_time is not None:
+            if time.time() - member.last_probe_issued_time \
                     >= pool.monitor.interval:
                 request_probe = True
 
@@ -270,7 +267,7 @@ class Tracker(multiprocessing.Process):
         else:
             member.retries_left = pool.monitor.retries
             request_probe = True
-        
+
         if request_probe:
             # issue probe
             probe = Probe(pool_name=pool.name,
@@ -278,19 +275,19 @@ class Tracker(multiprocessing.Process):
                           monitor=pool.monitor,
                           monitor_ip=member.monitor_ip)
 
-            self.prober_requests.put(probe) 
+            self.prober_requests.put(probe)
 
             # update the time when the probe was issued
             member.last_probe_issued_time = time.time()
-        
-            #LOG.debug('requested {}'.format(str(probe)))
 
-    def _change_pool_last_status(self, pool):
+            # LOG.debug('requested {}'.format(str(probe)))
+
+    @staticmethod
+    def _change_pool_last_status(pool):
         """Compare pool.last_status with pool.status, if different 
         pool.last_status is set to pool.status and a log message is generated.
         """
         if pool.last_status != pool.status:
             LOG.info('pool status change: pool {} is {}'.
-                     format(pool.name, state.pool.pprint_status(pool.status))) 
+                     format(pool.name, state.pool.pprint_status(pool.status)))
             pool.last_status = pool.status
-

@@ -6,15 +6,13 @@ import sys
 
 from polaris_health import MonitorFailed
 
-
-__all__ = [ 'Probe' ]
+__all__ = ['Probe']
 
 LOG = logging.getLogger(__name__)
 LOG.addHandler(logging.NullHandler())
 
 
 class Probe(object):
-
     """Health monitor probe"""
 
     def __init__(self, pool_name, member_ip, monitor, monitor_ip):
@@ -46,12 +44,12 @@ class Probe(object):
         except MonitorFailed as e:
             # if monitor failed status = False
             self.status = False
-            self.status_reason =  str(e)
+            self.status_reason = str(e)
             self.status_time = time.time()
         # protect the app from crashing if a monitor crashes
         except Exception as e:
             self.status = False
-            self.status_reason =  str(e)
+            self.status_reason = str(e)
             self.status_time = time.time()
             LOG.exception('{} crashed:\n{}'.format(str(self), e))
 
@@ -72,12 +70,11 @@ class Probe(object):
               'status: {status} '
               'status_reason: {status_reason} '
               'status_time: {status_time})'
-              .format(pool_name=self.pool_name, 
-                      member_ip=self.member_ip, 
+              .format(pool_name=self.pool_name,
+                      member_ip=self.member_ip,
                       monitor=self.monitor.__class__.__name__,
                       monitor_ip=self.monitor_ip,
-                      status=self.status, 
-                      status_reason=self.status_reason, 
+                      status=self.status,
+                      status_reason=self.status_reason,
                       status_time=self.status_time))
         return s
-

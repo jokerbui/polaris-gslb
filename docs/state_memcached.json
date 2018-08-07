@@ -1,0 +1,127 @@
+{
+    "globalnames": {
+        "vegadns-live.com": {
+            "name": "vegadns-live.com",
+            "pool_name": "vegadns-live",
+            "ttl": 1
+        },
+        "vegadns-vod.com": {
+            "name": "vegadns-vod.com",
+            "pool_name": "vegadns-vod",
+            "ttl": 1
+        }
+    },
+    "pools": {
+        "vegadns-vod": {
+            "members": [
+                {
+                    "monitor_ip": "123.30.168.25",
+                    "status": false,
+                    "ip": "123.30.168.25",
+                    "status_reason": "503 Backend fetch failed",
+                    "weight": 1,
+                    "name": "edges-vnpt",
+                    "last_probe_issued_time": 1533636351.8126404,
+                    "retries_left": 0,
+                    "region": "datacenter1"
+                },
+                {
+                    "monitor_ip": "210.211.120.36",
+                    "status": true,
+                    "ip": "210.211.120.36",
+                    "status_reason": "monitor passed",
+                    "weight": 1,
+                    "name": "edges-bd",
+                    "last_probe_issued_time": 1533636351.8126476,
+                    "retries_left": 2,
+                    "region": "datacenter2"
+                },
+                {
+                    "monitor_ip": "125.212.227.25",
+                    "status": false,
+                    "ip": "125.212.227.25",
+                    "status_reason": "timeout timed out during socket.connect()",
+                    "weight": 1,
+                    "name": "edges-pv",
+                    "last_probe_issued_time": 1533636351.8126554,
+                    "retries_left": 0,
+                    "region": "datacenter3"
+                }
+            ],
+            "fallback": "any",
+            "lb_method": "twrr",
+            "monitor": {
+                "use_ssl": true,
+                "hostname": "vegadns-vod.com",
+                "url_path": "/healthcheck?check_all=true",
+                "port": 443,
+                "name": "http",
+                "timeout": 5,
+                "retries": 2,
+                "interval": 10,
+                "expected_codes": [
+                    200
+                ]
+            },
+            "name": "vegadns-vod",
+            "max_addrs_returned": 1,
+            "last_status": true
+        },
+        "vegadns-live": {
+            "members": [
+                {
+                    "monitor_ip": "123.30.168.25",
+                    "status": false,
+                    "ip": "123.30.168.25",
+                    "status_reason": "503 Backend fetch failed",
+                    "weight": 1,
+                    "name": "edges-vnpt",
+                    "last_probe_issued_time": 1533636351.812602,
+                    "retries_left": 0,
+                    "region": "datacenter1"
+                },
+                {
+                    "monitor_ip": "210.211.120.36",
+                    "status": true,
+                    "ip": "210.211.120.36",
+                    "status_reason": "monitor passed",
+                    "weight": 1,
+                    "name": "edges-bd",
+                    "last_probe_issued_time": 1533636351.8126223,
+                    "retries_left": 2,
+                    "region": "datacenter2"
+                },
+                {
+                    "monitor_ip": "125.212.227.24",
+                    "status": false,
+                    "ip": "125.212.227.24",
+                    "status_reason": "301 Moved Permanently",
+                    "weight": 1,
+                    "name": "edges-pv",
+                    "last_probe_issued_time": 1533636351.8126304,
+                    "retries_left": 0,
+                    "region": "datacenter3"
+                }
+            ],
+            "fallback": "any",
+            "lb_method": "twrr",
+            "monitor": {
+                "use_ssl": true,
+                "hostname": "vegadns-live.com",
+                "url_path": "/healthcheck?check_all=true",
+                "port": 443,
+                "name": "http",
+                "timeout": 5,
+                "retries": 2,
+                "interval": 10,
+                "expected_codes": [
+                    200
+                ]
+            },
+            "name": "vegadns-live",
+            "max_addrs_returned": 1,
+            "last_status": true
+        }
+    },
+    "timestamp": 1533636351.8354971
+}
