@@ -1,0 +1,59 @@
+{
+    "globalnames": {
+        "vegadns-live.com": {
+            "pool_name": "vegadns-live",
+            "ttl": 1
+        },
+        "vegadns-vod.com": {
+            "pool_name": "vegadns-vod",
+            "ttl": 1
+        }
+    },
+    "timestamp": 1533637107.4291992,
+    "pools": {
+        "vegadns-live": {
+            "max_addrs_returned": 1,
+            "fallback": "any",
+            "dist_tables": {
+                "_default": {
+                    "rotation": [
+                        "210.211.120.36"
+                    ],
+                    "num_unique_addrs": 1,
+                    "index": 0
+                },
+                "datacenter2": {
+                    "rotation": [
+                        "210.211.120.36"
+                    ],
+                    "num_unique_addrs": 1,
+                    "index": 0
+                }
+            },
+            "lb_method": "twrr",
+            "status": true
+        },
+        "vegadns-vod": {
+            "max_addrs_returned": 1,
+            "fallback": "any",
+            "dist_tables": {
+                "_default": {
+                    "rotation": [
+                        "210.211.120.36"
+                    ],
+                    "num_unique_addrs": 1,
+                    "index": 0
+                },
+                "datacenter2": {
+                    "rotation": [
+                        "210.211.120.36"
+                    ],
+                    "num_unique_addrs": 1,
+                    "index": 0
+                }
+            },
+            "lb_method": "twrr",
+            "status": true
+        }
+    }
+}
